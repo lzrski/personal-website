@@ -83,7 +83,7 @@ gulp.task 'watch', (done) ->
     'assets/**/*'
     'scripts/**/*',
     'html/**/*'
-    'styl/**/*'
+    'styles/**/*'
     'package.json'
   ], gulp.series [
     'build'
