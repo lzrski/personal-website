@@ -23,8 +23,7 @@ gulp.task 'coffee', ->
     .pipe sourcemaps.init()
     .pipe coffee()
     # Only write source maps if env is development.
-    # Otherwise uglify.
-    .pipe if development then through.obj() else uglify()
+    # Otherwise just pass through.
     .pipe if development then sourcemaps.write '.' else through.obj()
     .pipe gulp.dest 'build/'
 
