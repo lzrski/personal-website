@@ -4,29 +4,42 @@ module.exports = new View ->
   @doctype 5
 
   @html =>
+    @head =>
+      @link rel: 'stylesheet', href: '/main.css'
+
     @body =>
-      @header =>
-        @div id: 'logo', =>
-          @h1 'Spookers'
-        @nav id: 'menu', =>
-          for item in [
-            'Home'
-            'About us'
-            'We are haunting!'
-            'After life party'
-            'Contact'
-          ]
-            @a href: '#', item
-        @a id: 'sign-up', href: '#', 'Sign up'
-        @button id: 'hamburger', 'Menu'
+      @div id: 'container', =>
+        @header =>
+          @div id: 'logo', =>
+            @img src: 'logo.png', alt: 'Spookers logo'
 
-      @tag 'main', =>
-        @h2 =>
-          @text 'Nunc labortis magna dolor, in pretium massa'
-          @strong 'portittor sit. amet.'
+          @nav =>
+            @ul id: 'menu', =>
+              for path, label of {
+                'home'    : 'Home'
+                'about'   : 'About us'
+                'haunt'   : 'We\'re haunting!'
+                'party'   : 'After life party'
+                'contact' : 'Contact'
+              }
+                @li
+                  class: 'active' if path is 'home'
+                  =>
+                    @a href: "##{path}", label
 
-        @button id: 'video', 'Play'
+            @a id: 'sign-up', href: '#', 'Sign up'
 
-        @p "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida neque at nunc lacinia, quis tempus tortor fermentum. Aenean dapibus odio vel bibendum vehicula. Fusce pulvinar laoreet ligula ac scelerisque. Integer vel interdum ex. In semper justo in euismod facilisis."
+            @button id: 'hamburger', =>
+              @object type: 'image/svg+xml', data: 'hamburger.svg', =>
+                'Menu'
 
-        @a class: 'more', href: '#more', 'Find out more'
+        @tag 'main', =>
+          @h2 =>
+            @text 'Nunc labortis magna dolor, in pretium massa'
+            @strong 'portittor sit. amet.'
+
+          @button id: 'video', 'Play'
+
+          @p "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida neque at nunc lacinia, quis tempus tortor fermentum. Aenean dapibus odio vel bibendum vehicula. Fusce pulvinar laoreet ligula ac scelerisque. Integer vel interdum ex. In semper justo in euismod facilisis."
+
+          @a class: 'more', href: '#more', 'Find out more'
