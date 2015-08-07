@@ -68,7 +68,10 @@ gulp.task 'build', gulp.series [
 gulp.task 'serve', ->
   gulp
     .src 'build'
-    .pipe webserver livereload: yes
+    .pipe webserver
+      host      : '0.0.0.0'
+      open      : 'http://localhost:8000/'
+      livereload: yes
 
 gulp.task 'watch', (done) ->
   gulp.watch [
