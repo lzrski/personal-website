@@ -14,10 +14,15 @@ header
       text-transform  uppercase
 
       &#sign-up
-        display   block
-        padding   3rem 8rem
-        border    solid 1px gray
-        border-radius 2rem
+        display         block
+        padding         3rem 8rem
+        border          solid 1px gray
+        border-radius   2rem
+        transition      border-color 1s ease
+
+        &:hover
+          border-color  red
+
 
     #menu
       display     flex
