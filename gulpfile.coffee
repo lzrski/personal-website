@@ -68,6 +68,9 @@ gulp.task 'styl', ->
   gulp
     .src './styles/index.styl'
     .pipe stylus()
+  	.pipe autoprefixer
+    	browsers : [ '> 5%', 'last 5 versions' ]
+    	cascade  : false
     .pipe gulp.dest './build'
 
 gulp.task 'build', gulp.series [
