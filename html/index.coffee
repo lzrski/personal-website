@@ -35,7 +35,7 @@ module.exports = new View ->
 
         @tag 'main', =>
           @h2 =>
-            @text 'Nunc labortis magna dolor, in pretium massa'
+            @text 'Nunc labortis magna dolor, in pretium massa '
             @strong 'portittor sit. amet.'
 
           @button id: 'video', 'Play'
