@@ -19,17 +19,17 @@ jQuery ($) =>
   menu.append line
 
   moveTo = (item) ->
-    item  = $ item
+    item  = $(item).find 'a'
     left  = item.position().left
     width = item.width()
 
     line.css { left, width }
 
   # Set initial position to active element
-  moveTo menu.find '.active a'
+  moveTo menu.find '.active'
 
   # Handle hover event
   into  = (event) -> moveTo event.target
-  away  = (event) -> moveTo menu.find '.active a'
+  away  = (event) -> moveTo menu.find '.active'
 
-  $('header nav li a').hover into, away
+  $('header nav li').hover into, away
