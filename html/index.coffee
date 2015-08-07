@@ -38,7 +38,7 @@ module.exports = new View ->
             @text 'Nunc labortis magna dolor, in pretium massa '
             @strong 'portittor sit. amet.'
 
-          @button id: 'video', 'Play'
+          @button id: 'play', 'Play'
 
           @p "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida neque at nunc lacinia, quis tempus tortor fermentum. Aenean dapibus odio vel bibendum vehicula. Fusce pulvinar laoreet ligula ac scelerisque. Integer vel interdum ex. In semper justo in euismod facilisis."
 
