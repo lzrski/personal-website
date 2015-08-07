@@ -44,3 +44,6 @@ module.exports = new View ->
           @p "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida neque at nunc lacinia, quis tempus tortor fermentum. Aenean dapibus odio vel bibendum vehicula. Fusce pulvinar laoreet ligula ac scelerisque. Integer vel interdum ex. In semper justo in euismod facilisis."
 
           @a class: 'more', href: '#more', 'Find out more'
+
+
+      @script src: 'bundle.js'
