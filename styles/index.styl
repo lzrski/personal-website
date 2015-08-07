@@ -34,14 +34,17 @@ html
     font-size 4px
     body
       font-size     3.5rem // 14px
-
-html, body, #container
+html
   height  100%
+
+body
+  min-height  100%
+
   margin  0
   padding 0
 
-body
   color           white
+  display         flex
 
   background      black
   background-image    url('background.jpg')
@@ -49,7 +52,10 @@ body
 
 #container
   width           100%
-  margin          auto
+  min-height      100%
+  flex-grow       1
+  flex-shrink     0
+
   display         flex
   flex-direction  column
 
