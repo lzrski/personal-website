@@ -50,7 +50,7 @@ gulp.task 'assets', ->
 
 gulp.task 'styl', ->
   gulp
-    .src './styles/main.styl'
+    .src './styles/index.styl'
     .pipe stylus()
     .pipe gulp.dest './build'
 
