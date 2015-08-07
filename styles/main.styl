@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,100,300,700&subset=latin,latin-ext);
 
+@import header
+
 html, body, #container
   min-height  100%
 
@@ -16,47 +18,3 @@ body
   width       100%
   max-width   1140px
   margin      auto
-
-header
-  display     flex
-  justify-content space-between
-  align-items center
-  width       100%
-
-  nav
-    display   flex
-    align-items center
-
-    a
-      color           white
-      text-decoration none
-      text-transform  uppercase
-
-      &#sign-up
-        display   block
-        padding   3rem 8rem
-        border    solid 1px #515353
-        border-radius 2rem
-
-    #menu
-      display     flex
-      list-style  none
-
-      @media screen and (max-width: 960px)
-        display none
-
-      li
-        padding     5rem 2rem
-        margin      0 2rem
-        font-weight 300
-
-        &.active
-          border-bottom solid 0.5rem #c44545
-          font-weight   bold
-
-    #hamburger
-      background  none
-      border      none
-
-      @media screen and (min-width: 960px)
-        display none
