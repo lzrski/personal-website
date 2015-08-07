@@ -27,11 +27,11 @@ header
 
 
     #menu
-      display     flex
-      list-style  none
+      list-style    none
+      display       none
 
-      @media screen and (max-width: 960px)
-        display none
+      @media (min-width: 960px)
+        display     flex
 
       li
         padding     5rem 2rem
@@ -45,7 +45,7 @@ header
     #hamburger
       background  none
       border      none
+      display     block
 
-      @media screen and (min-width: 960px)
-        // FIXME: At 960 neither hamburger nor menu is visible
-        display none
+      @media (min-width: 960px)
+        display     none
