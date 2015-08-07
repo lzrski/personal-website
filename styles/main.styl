@@ -9,22 +9,37 @@ bold      = 700
 red       = #c44545
 gray      = #515353
 
-@import header
+// Media
+tablet    = 'screen and (min-width: 640)'
+desktop   = 'screen and (min-width: 960)'
 
+html
+  font-size   2px
+  font-family 'Lato', sans-serif;
+
+  @media tablet
+    font-size 3px
+
+  @media desktop
+    font-size 4px
 
 html, body, #container
   height  100%
   margin  0
   padding 0
 
-html
-  font-size   4px
-  font-family 'Lato', sans-serif;
+@import header
 
 body
   background      black
   color           white
-  font-size       3.5rem
+  font-size       6rem
+
+  @media tablet
+    font-size     4rem
+
+  @media desktop
+    font-size     2.5rem
 
 #container
   width           100%
@@ -38,13 +53,16 @@ body
     flex-shrink   0
     flex-grow     0
 
+  main
+    flex-shrink   0
+    flex-grow     1
+
 main
   display               flex
   flex-direction        column
   align-items           center
   justify-content       space-around
 
-  flex-shrink           0
 
   text-align            center
 
@@ -72,6 +90,7 @@ main
     background-image    url('play-btn.png')
     background-position center
     background-repeat   no-repeat
+    background-size     30rem
 
     border              none
 
@@ -83,7 +102,7 @@ main
   .more
     padding-bottom      16rem
 
-    font-size           4.5rem
+    font-size           9rem
     text-decoration     none
     color               white
 
@@ -91,3 +110,10 @@ main
     background-image    url('more-btn.png')
     background-position bottom center
     background-repeat   no-repeat
+    background-size     10rem
+
+    @media tablet
+      font-size         6rem
+
+    @media desktop
+      font-size         4.5rem
