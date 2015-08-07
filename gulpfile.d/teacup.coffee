@@ -3,6 +3,7 @@
 gulp      = require 'gulp'
 through   = require 'through2'
 rename    = require "gulp-rename"
+prettify  = require 'gulp-prettify'
 
 defaults =
   sources     : 'html/**/*'
@@ -12,6 +13,8 @@ module.exports = (options = {}) ->
   options[key]  ?= value for key, value of defaults
 
   ->
+    { NODE_ENV } = process.env
+
     gulp
       .src options.sources, read: no
       .pipe through.obj (file, enc, done) ->
@@ -24,4 +27,5 @@ module.exports = (options = {}) ->
         @push file
         do done
       .pipe rename extname: '.html'
+      .pipe if NODE_ENV is 'development' then prettify indent_size: 2 else through.obj()
       .pipe gulp.dest options.destination
