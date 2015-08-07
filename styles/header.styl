@@ -39,6 +39,7 @@ header
     #menu
       list-style    none
       display       none
+      position      relative
 
       @media desktop
         display     flex
@@ -48,9 +49,12 @@ header
         margin      0 2rem
         font-weight light
 
-        &.active
-          border-bottom solid 0.5rem red
-          font-weight   bold
+      .magic-line
+        position      absolute
+        bottom        0
+        height        2px
+        width         40px
+        background    red
 
     #hamburger
       background  none
