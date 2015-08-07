@@ -5,7 +5,16 @@ sourcemaps  = require 'gulp-sourcemaps'
 del         = require 'del'
 webserver   = require 'gulp-webserver'
 stylus      = require 'gulp-stylus'
+autoprefixer= require 'gulp-autoprefixer'
 through     = require 'through2'
+browserify  = require 'browserify'
+watchify    = require 'watchify'
+coffeeify   = require 'coffeeify'
+uglify      = require 'gulp-uglify'
+buffer      = require 'vinyl-buffer'
+source      = require 'vinyl-source-stream'
+exorcist    = require 'exorcist'
+_           = require 'lodash'
 
 
 gulp.task 'clean', (done) ->
@@ -14,20 +23,27 @@ gulp.task 'clean', (done) ->
 # Use default options for teacup function
 gulp.task 'html', do require './gulpfile.d/teacup'
 
-# TODO: Move coffee to gulpfile.d
-gulp.task 'coffee', ->
-  development = process.env.NODE_ENV is 'development'
+# Fast browserify builds using watchify
+b = watchify browserify _.merge {}, watchify.args,
+  entries   : './scripts/index.coffee'
+  debug     : true
+  transform : coffeeify
+  extensions: ['.coffee']
 
-  gulp
-    .src 'scripts/**/*.coffee'
-    .pipe sourcemaps.init()
-    .pipe coffee()
-    # Only write source maps if env is development.
-    # Otherwise just pass through.
-    .pipe if development then sourcemaps.write '.' else through.obj()
-    .pipe gulp.dest 'build/'
+b.on 'log', console.log
 
-# TODO: Move test to gulpfile.d
+gulp.task 'scripts', ->
+  { NODE_ENV } = process.env
+
+  b.bundle()
+    .on 'error', (error) ->
+      console.trace error
+    .pipe exorcist './build/bundle.js.map'
+    .pipe source 'bundle.js'
+    .pipe buffer()
+    .pipe gulp.dest './build/'
+
+
 gulp.task 'test', ->
   development = process.env.NODE_ENV is 'development'
 
@@ -60,7 +76,7 @@ gulp.task 'build', gulp.series [
     'assets'
     'html'
     'styl'
-    'coffee'
+    'scripts'
   ]
   'test'
 ]
