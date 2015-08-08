@@ -1,7 +1,7 @@
 {
-  "name": "daft-code-exercise",
+  "name": "tadeusz-lazurski-personal-website",
   "version": "0.0.0",
-  "description": "Fun stuff for Daft Code",
+  "description": "My personal website",
   "main": "build/index.js",
   "scripts": {
     "test": "gulp test",
@@ -9,7 +9,7 @@
     "prepublish": "gulp build"
   },
   "author": "Tadeusz Łazurski",
-  "license": "All rights reserved",
+  "license": "GPL3",
   "devDependencies": {
     "browserify": "^11.0.1",
     "coffee-script": "^1.8.0",
