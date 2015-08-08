@@ -46,7 +46,10 @@ module.exports = new View ->
 
           @p => @raw "Currently I'm interested in full time position in Europe, preferably involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong>."
 
-          @a class: 'more', href: '#more', 'Find out more'
+          @a
+            class : 'source'
+            href  : 'https://github.com/lzrski/personal-website'
+            'Fork this website at GitHub'
 
 
       @script src: 'bundle.js'
