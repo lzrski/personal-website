@@ -22,6 +22,9 @@ module.exports = new View ->
             alt   : 'Tadeusz Łazurski face - less than a half of it'
 
         @tag 'main', =>
+
+          @p => @raw "Currently I'm interested in full time position in Europe, involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong>."
+
           @ul id: 'menu', =>
             (@li => @a { href }, label) for label, href of {
               'GitHub'        : 'https://github.com/lzrski'
@@ -30,7 +33,6 @@ module.exports = new View ->
               'LinkedIn'      : 'https://pl.linkedin.com/in/lazurski'
             }
 
-          @p => @raw "Currently I'm interested in full time position in Europe, preferably involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong>."
 
 
         @footer =>

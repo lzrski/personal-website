@@ -20,20 +20,21 @@ html
   font-family 'Lato', sans-serif;
 
   // It's mobile by default
-  font-size   2px
+  font-size         2px
 
   body
-    font-size       6rem  // 12px
+    font-size       8rem  // 12px
+
 
   @media tablet
-    font-size 3px
+    font-size       3px
     body
-      font-size     4rem  // 12px
+      font-size     7rem  // 12px
 
   @media desktop
-    font-size 4px
+    font-size       4px
     body
-      font-size     3.5rem // 14px
+      font-size     6rem // 14px
 html
   height  100%
 
@@ -53,18 +54,23 @@ body
 #container
   width           100%
   min-height      100%
+  padding         0 16rem
+  box-sizing      border-box
+
   flex-grow       1
   flex-shrink     0
 
   display         flex
   flex-direction  column
+  justify-content space-between
 
   background      hsla(0,0%,0%,90%)
   transition      background 1s ease
 
-  &.play
-    background    hsla(0,0%,0%,50%)
+  text-align      center
 
+  @media tablet
+    text-align    initial
 
   header
     flex-shrink   0
@@ -72,7 +78,7 @@ body
 
   main
     flex-shrink   0
-    flex-grow     1
+    flex-grow     0
 
   // Components:
   @import header
