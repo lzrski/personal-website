@@ -1,66 +1,35 @@
 header
-  display         flex
-  justify-content space-between
-  align-items     center
+  display             flex
+  justify-content     flex-end
+  align-items         center
+  flex-direction      column-reverse
+  @media tablet
+    flex-direction    row-reverse
 
-  width           100%
-  max-width       1140px
-  margin          auto
+  padding             16rem
+  box-sizing          border-box
 
-  padding         4rem
-  box-sizing      border-box
+  width               100%
+  max-width           1140px
+  margin              auto
 
-  #logo
-    max-width     55rem
+  h1
+    padding             6rem
 
-    img
-      max-width   100%
+    font-weight         light
+    font-size           12.5rem
 
-  nav
-    display   flex
-    align-items center
-
-    a
-      color           white
-      text-decoration none
-      text-transform  uppercase
-
-      &#sign-up
-        display         block
-        padding         3rem 8rem
-        border          solid 1px gray
-        border-radius   2rem
-        transition      border-color 1s ease
-
-        &:hover
-          border-color  red
+    text-align          center
+    @media tablet
+      text-align        initial
 
 
-    #menu
-      list-style    none
-      display       none
-      position      relative
+    strong
+      font-weight       regular
+      color             red
 
-      @media desktop
-        display     flex
+  .main-image
+    padding             6rem
 
-      li
-        padding     5rem 4rem
-        margin      0
-        font-weight light
-
-      .magic-line
-        position      absolute
-        bottom        0
-        height        2px
-        width         40px
-        background    red
-        transition    left 0.5s ease, width 0.5s ease
-
-    #hamburger
-      background  none
-      border      none
-      display     block
-
-      @media desktop
-        display     none
+    height              60rem
+    flex-shrink         0
