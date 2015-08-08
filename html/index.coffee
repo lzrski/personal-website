@@ -15,17 +15,17 @@ module.exports = new View ->
 
           @nav =>
             @ul id: 'menu', =>
-              for path, label of {
-                'home'    : 'Home'
-                'about'   : 'About us'
-                'haunt'   : 'We\'re haunting!'
-                'party'   : 'After life party'
-                'contact' : 'Contact'
+              for label, href of {
+                'Here'          : 'http://lazurski.pl/'
+                'GitHub'        : 'https://github.com/lzrski'
+                'StackOverflow' : 'https://stackoverflow.com/users/1151982'
+                'Twitter'       : 'https://twitter.com/lazurski'
+                'LinkedIn'      : 'https://pl.linkedin.com/in/lazurski'
               }
                 @li
-                  class: 'active' if path is 'home'
+                  class: 'active' if label is 'Here'
                   =>
-                    @a href: "##{path}", label
+                    @a { href }, label
 
             @a id: 'sign-up', href: '#', 'Sign up'
 
