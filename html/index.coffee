@@ -25,6 +25,8 @@ module.exports = new View ->
 
           @p => @raw "Currently I'm interested in full time position in Europe, involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong>."
 
+          @p class: 'small', "Get in touch via"
+
           @ul id: 'menu', =>
             (@li => @a { href }, label) for label, href of {
               'GitHub'        : 'https://github.com/lzrski'
