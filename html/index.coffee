@@ -11,8 +11,7 @@ module.exports = new View ->
     @body =>
       @div id: 'container', =>
         @header =>
-          @div id: 'logo', =>
-            @img src: 'logo.png',
+          @h1 class: 'title', 'Tadeusz Łazurski'
 
           @nav =>
             @ul id: 'menu', =>
@@ -36,15 +35,16 @@ module.exports = new View ->
 
         @tag 'main', =>
           @h2 =>
-            @text 'Nunc labortis magna dolor, in pretium massa '
-            @strong 'portittor sit. amet.'
+            @raw "<strong>Hello</strong>, my name is Tadeusz."
+            do @br
+            @raw "I'm a <strong>full stack web developer</strong>."
 
           @img
             class : 'main-image'
             src   : 'tadeusz-lazurski-circle-transparent.png'
             alt   : 'Tadeusz Łazurski face - less than a half of it'
-            
-          @p "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida neque at nunc lacinia, quis tempus tortor fermentum. Aenean dapibus odio vel bibendum vehicula. Fusce pulvinar laoreet ligula ac scelerisque. Integer vel interdum ex. In semper justo in euismod facilisis."
+
+          @p => @raw "Currently I'm interested in full time position in Europe, preferably involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong>."
 
           @a class: 'more', href: '#more', 'Find out more'
 
