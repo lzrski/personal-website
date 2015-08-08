@@ -12,7 +12,7 @@ module.exports = new View ->
       @div id: 'container', =>
         @header =>
           @div id: 'logo', =>
-            @img src: 'logo.png', alt: 'Spookers logo'
+            @img src: 'logo.png',
 
           @nav =>
             @ul id: 'menu', =>
@@ -39,8 +39,11 @@ module.exports = new View ->
             @text 'Nunc labortis magna dolor, in pretium massa '
             @strong 'portittor sit. amet.'
 
-          @button id: 'play', 'Play'
-
+          @img
+            class : 'main-image'
+            src   : 'tadeusz-lazurski-circle-transparent.png'
+            alt   : 'Tadeusz Łazurski face - less than a half of it'
+            
           @p "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida neque at nunc lacinia, quis tempus tortor fermentum. Aenean dapibus odio vel bibendum vehicula. Fusce pulvinar laoreet ligula ac scelerisque. Integer vel interdum ex. In semper justo in euismod facilisis."
 
           @a class: 'more', href: '#more', 'Find out more'
