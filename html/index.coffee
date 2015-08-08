@@ -27,8 +27,6 @@ module.exports = new View ->
                   =>
                     @a { href }, label
 
-            @a id: 'sign-up', href: '#', 'Sign up'
-
             @button id: 'hamburger', =>
               @object type: 'image/svg+xml', data: 'hamburger.svg', =>
                 'Menu'
