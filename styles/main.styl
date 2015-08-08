@@ -30,18 +30,16 @@ main
   p
     max-width           160rem
 
-  .more
-    padding-bottom      16rem
-
+  .source
     font-size           9rem
     text-decoration     none
     color               white
 
-    background          none
-    background-image    url('more-btn.png')
-    background-position bottom center
-    background-repeat   no-repeat
-    background-size     8rem
+    &:after
+      content           '</>'
+      display           block
+      font-weight       bold
+      padding           3rem
 
     @media tablet
       font-size         6rem
