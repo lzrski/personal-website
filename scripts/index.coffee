@@ -6,7 +6,7 @@ jQuery ($) =>
   # Inspired by https://css-tricks.com/jquery-magicline-navigation/
 
   # We deal with a #menu ul element
-  menu = $('main #menu')
+  menu = $('#menu')
 
   # Add a magic line element
   line = $ "<div class = 'magic-line'>"
@@ -16,21 +16,18 @@ jQuery ($) =>
     left    = 0
     width   = 0
 
-    try
-      item  = $(item).find 'span'
-      left  = item.position().left
-      width = item.width()
-    catch error
+    item  = $(item).find 'span'
+    left  = item.position().left
+    width = item.width()
 
-    finally
-      line.css { left, width }
+    line.css { left, width }
 
   # Set initial position to active element
-  moveTo menu.find '.active'
+  moveTo menu.find '.caption'
 
   # Handle hover event
   into  = (event) -> moveTo event.target
-  away  = (event) -> moveTo menu.find '.active'
+  away  = (event) -> moveTo menu.find '.caption'
 
   menu
     .find 'li'
