@@ -1,6 +1,7 @@
-$ = jQuery  = require 'jquery'
+jQuery      = require 'jquery'
+{debounce}  = require 'lodash'
 
-jQuery(window).load =>
+jQuery ($) =>
   # Magic line
   # Inspired by https://css-tricks.com/jquery-magicline-navigation/
 
@@ -11,6 +12,7 @@ jQuery(window).load =>
   line = $ "<div class = 'magic-line'>"
   menu.append line
 
+  # General movement function
   moveTo = (item) ->
     item  = $(item).find 'span'
     left  = item.position().left
@@ -18,15 +20,17 @@ jQuery(window).load =>
 
     line.css { left, width }
 
-  # Set initial position to active element
-  moveTo menu.find '.caption'
-
-  # Handle hover event
-  into  = (event) -> moveTo event.target
-  away  = (event) -> moveTo menu.find '.caption'
+  # Handler for hover event
+  reset = debounce (=> moveTo menu.find '.caption'), 200
+  enter = (event) =>
+    do reset.cancel
+    moveTo event.target
 
   menu
     .find 'li'
-    .hover into, away
+    .hover enter, reset
 
-  $(window).resize -> moveTo menu.find '.caption'
+  # Set initial position
+  $(window)
+    .on 'load'  , reset
+    .on 'resize', reset
