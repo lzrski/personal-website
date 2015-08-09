@@ -30,10 +30,9 @@ module.exports = new View ->
 
 
         @footer =>
-          @p class: 'small', "Get in touch via"
-          
           @ul id: 'menu', =>
-            (@li => @a { href }, => @span label) for label, href of {
+            @li class: 'caption', => @span "Get in touch via"
+            (@li => @a { href },  => @span label) for label, href of {
               'GitHub'        : 'https://github.com/lzrski'
               'StackOverflow' : 'https://stackoverflow.com/users/1151982'
               'Twitter'       : 'https://twitter.com/lazurski'

@@ -15,13 +15,21 @@
     margin            0
     font-weight       light
 
-    a
+    &.caption, a
       display         block
       padding         4rem 0
       color           white
       text-decoration none
-      text-transform  uppercase
 
+    &.caption
+      font-weight     bold
+      width           100%
+
+      @media tablet
+        width         initial
+
+    a
+      text-transform  uppercase
 
   .magic-line
     position      absolute
