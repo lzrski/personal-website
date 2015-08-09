@@ -34,7 +34,7 @@ module.exports = new View ->
             @li class: 'caption', => @span "Get in touch via"
             (@li => @a { href },  => @span label) for label, href of {
               'GitHub'        : 'https://github.com/lzrski'
-              'StackOverflow' : 'https://stackoverflow.com/users/1151982'
+              'StackOverflow' : 'https://careers.stackoverflow.com/lazurski'
               'Twitter'       : 'https://twitter.com/lazurski'
               'LinkedIn'      : 'https://pl.linkedin.com/in/lazurski'
             }
