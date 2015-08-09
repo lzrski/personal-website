@@ -39,10 +39,9 @@ module.exports = new View ->
               'LinkedIn'      : 'https://pl.linkedin.com/in/lazurski'
             }
 
-          # @a
-          #   class : 'source'
-          #   href  : 'https://github.com/lzrski/personal-website'
-          #   'Fork this website at GitHub'
-
+          @a
+            class : 'source'
+            href  : 'https://github.com/lzrski/personal-website'
+            'Fork this website at GitHub'
 
       @script src: 'bundle.js'
