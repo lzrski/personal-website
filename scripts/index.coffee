@@ -1,7 +1,6 @@
-jQuery = require 'jquery'
+$ = jQuery  = require 'jquery'
 
-
-jQuery ($) =>
+jQuery(window).load =>
   # Magic line
   # Inspired by https://css-tricks.com/jquery-magicline-navigation/
 
@@ -13,9 +12,6 @@ jQuery ($) =>
   menu.append line
 
   moveTo = (item) ->
-    left    = 0
-    width   = 0
-
     item  = $(item).find 'span'
     left  = item.position().left
     width = item.width()
