@@ -2,28 +2,28 @@ jQuery = require 'jquery'
 
 
 jQuery ($) =>
-  # Brighten blend on play button click
-  $('#play').click (event) ->
-    do event.preventDefault
-
-    $('#container').addClass 'play'
-
   # Magic line
   # Inspired by https://css-tricks.com/jquery-magicline-navigation/
 
   # We deal with a #menu ul element
-  menu = $('header nav #menu')
+  menu = $('main #menu')
 
   # Add a magic line element
   line = $ "<div class = 'magic-line'>"
   menu.append line
 
   moveTo = (item) ->
-    item  = $(item).find 'a'
-    left  = item.position().left
-    width = item.width()
+    left    = 0
+    width   = 0
 
-    line.css { left, width }
+    try
+      item  = $(item).find 'span'
+      left  = item.position().left
+      width = item.width()
+    catch error
+
+    finally
+      line.css { left, width }
 
   # Set initial position to active element
   moveTo menu.find '.active'
@@ -32,4 +32,6 @@ jQuery ($) =>
   into  = (event) -> moveTo event.target
   away  = (event) -> moveTo menu.find '.active'
 
-  $('header nav li').hover into, away
+  menu
+    .find 'li'
+    .hover into, away

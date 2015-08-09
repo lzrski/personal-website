@@ -6,53 +6,18 @@ main
   > *
     display             block
 
-  #menu
-    display           flex
-    flex-wrap         wrap
-    justify-content   flex-start
-    position          relative
-
-    list-style        none
-    margin            0
-    padding           0
-
-
-    li
-      font-size         5rem
-      flex-grow         1
-      margin            0
-      font-weight       light
-
-      a
-        display         block
-        padding         4rem 0
-        color           white
-        text-decoration none
-        text-transform  uppercase
-
-
-    .magic-line
-      position      absolute
-      bottom        0
-      height        2px
-      width         40px
-      background    red
-      transition    left 0.5s ease, width 0.5s ease
-
-  .small
-    font-size       .8em
-    font-weight     thin
-    margin          0
 
 footer
   text-align            center
+  padding-bottom        4rem
 
+  @import get-in-touch-menu
 
   .source
     text-decoration     none
     color               white
 
-    &:after
+    &:before
       content           '</>'
       display           block
       font-weight       bold
