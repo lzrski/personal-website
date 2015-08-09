@@ -35,12 +35,14 @@ b.on 'log', console.log
 gulp.task 'scripts', ->
   { NODE_ENV } = process.env
 
-  b.bundle()
+  b
+    .bundle()
     .on 'error', (error) ->
       console.trace error
     .pipe exorcist './build/bundle.js.map'
     .pipe source 'bundle.js'
     .pipe buffer()
+    .pipe if NODE_ENV is 'development' then through.obj() else uglify()
     .pipe gulp.dest './build/'
 
 
