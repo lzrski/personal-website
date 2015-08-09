@@ -25,6 +25,26 @@
       font-weight     bold
       width           100%
 
+      // Display fancy lines on both sides on mobile
+      // on tablet and deskotp display magic line instead
+      display               flex
+      align-items           center
+
+      &:after, &:before
+        content             ''
+        flex                1
+        display             block
+        height              2px
+        background          red
+        margin              0 6rem
+
+      @media tablet
+        display             block
+        
+        &:before, &:after
+          display           none
+
+
       @media tablet
         width         initial
 
