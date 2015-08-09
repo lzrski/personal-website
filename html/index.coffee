@@ -23,7 +23,7 @@ module.exports = new View ->
 
         @tag 'main', =>
 
-          @p => @raw "Currently I'm interested in full time position in Europe, involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong>."
+          @p => @raw "Currently I'm interested in full time position involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong> in Munich area."
 
 
 
