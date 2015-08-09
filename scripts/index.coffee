@@ -28,3 +28,5 @@ jQuery(window).load =>
   menu
     .find 'li'
     .hover into, away
+
+  $(window).resize -> moveTo menu.find '.caption'
