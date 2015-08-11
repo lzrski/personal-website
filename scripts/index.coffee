@@ -34,3 +34,18 @@ jQuery ($) =>
   $(window)
     .on 'load'  , reset
     .on 'resize', reset
+
+  beforePrint = =>
+    $('h1').text 'Printing?'
+
+  afterPrint = =>
+    $('h1').text 'Done printing?'
+
+  if window.matchMedia?
+    mediaQueryList = window.matchMedia 'print'
+    mediaQueryList.addListener (mql) =>
+      if mql.matches then do beforePrint
+      else do afterPrint
+
+  window.onbeforeprint  = beforePrint;
+  window.onafterprint   = afterPrint;
