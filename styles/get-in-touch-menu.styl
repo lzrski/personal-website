@@ -1,8 +1,10 @@
 #menu
-  display           flex
-  flex-wrap         wrap
-  justify-content   flex-start
-  position          relative
+  display           block
+  @media tablet
+    display         flex
+    flex-wrap       wrap
+    justify-content flex-start
+    position        relative
 
   list-style        none
   margin            0
@@ -40,7 +42,7 @@
 
       @media tablet
         display             block
-        
+
         &:before, &:after
           display           none
 
