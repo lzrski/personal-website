@@ -5,7 +5,7 @@ module.exports = new View ->
 
   @html =>
     @head =>
-      @link rel: 'stylesheet', href: 'index.css'
+      @link rel: 'stylesheet', href: '/index.css'
       @meta name: "viewport", content: "width=device-width, initial-scale=1.0"
 
     @body =>
@@ -18,16 +18,12 @@ module.exports = new View ->
 
           @img
             class : 'main-image'
-            src   : 'tadeusz-lazurski-circle-transparent.png'
+            src   : '/tadeusz-lazurski-circle-transparent.png'
             alt   : 'Tadeusz Łazurski face - less than a half of it'
 
         @tag 'main', =>
 
           @p => @raw "Currently I'm interested in full time position involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong> in Munich area."
-
-
-
-
 
         @footer =>
           @ul id: 'menu', =>
@@ -45,4 +41,5 @@ module.exports = new View ->
           #   'Fork this website at GitHub'
 
 
-      @script src: 'bundle.js'
+      @script src: '/bundle.js'
+      @script src: '/google-analytics.js'
