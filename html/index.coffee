@@ -23,7 +23,7 @@ module.exports = new View ->
 
         @tag 'main', =>
 
-          @p => @raw "Currently I'm interested in full time position involving <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong> in Munich area."
+          @p => @raw "I enjoy solving problems using <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong> at <a href='http://beestar.eu/'><strong>Beestar</strong></a> - an IoT company based in wonderful Amsterdam."
 
         @footer =>
           @ul id: 'menu', =>
