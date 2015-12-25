@@ -1,32 +1,50 @@
-View = require 'teacup-view'
+View     = require 'teacup-view'
+typeform = require './typeform'
 
 module.exports = new View ->
 
   @div class: 'bottom-container', =>
-    @header class: "bottom-header", =>
-      @h1 =>
-        @raw "We will create your dream web application."
-      @h3 "As a team of developers we want to provide the best quality. Fill in contact form and we will contact you with our offer."
-      @raw """
-        <a class="typeform-share button" href="https://dorilori.typeform.com/to/KJMtfy" data-mode="1" target="_blank">Contact us</a>
-        <script>
-          (function() {
-            var qs, js, q, s, d = document,
-              gi = d.getElementById,
-              ce = d.createElement,
-              gt = d.getElementsByTagName,
-              id = 'typef_orm',
-              b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
-            if (!gi.call(d, id)) {
-              js = ce.call(d, 'script');
-              js.id = id;
-              js.src = b + 'share.js';
-              q = gt.call(d, 'script')[0];
-              q.parentNode.insertBefore(js, q)
-            }
-          })()
-        </script>
-      """
+
+    @p "We are a team of two full stack web developers available to be hired for your project."
+
+    @h3 "Area of expertise"
+
+    @h4 "Product design"
+    @p "We can help you choose right feature set and technology stack for your product."
+    @p "We have experience in project management and product development in various types of organisations."
+
+    @h4 "Frontend technologies"
+    @ul =>
+      @li tech for tech in [
+        "JavaScript"
+        "HTML"
+        "CSS"
+        "React.js"
+        "CoffeeScript"
+        "Backbone.js"
+        "jQuery"
+      ]
+
+    @h4 "Backend technologies"
+    @ul =>
+      @li tech for tech in [
+        "Node.js"
+        "RethinkDB"
+        "ElasticSearch"
+        "SocketIO"
+        "Docker"
+        "MongoDB"
+        "SQL"
+      ]
+
+    @h3 "How are we  working"
+
+    @p "You can outsource your entire project or it's part to us or hire us to strenghten your existing team."
+
+    @p "We can work remotely or at your office in the Amsterdam area."
+
+
+    typeform()
 
     @tag 'main', class: 'about', =>
       @div class: "tadeusz", =>
@@ -40,9 +58,10 @@ module.exports = new View ->
       @div class: "dorota", =>
         @img
           class : 'bottom-image'
-          src   : '/Dorota-Cieslinska-photo.jpg'
+          src   : '/dorota-cieslinska-square-transparent.png'
           alt   : 'Dorota Cieslinska'
           text  : 'Dorota Cieslinska'
         @h3 'Dorota Cieslinska'
         @p 'Frontend developer'
-    # @p "Copyright Tadeusz Lazurski & Dorota Cieslinska 2015"
+
+    # TODO: @p "Copyright Tadeusz Lazurski & Dorota Cieslinska 2015"
