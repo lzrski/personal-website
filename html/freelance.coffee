@@ -58,7 +58,7 @@ module.exports = new View ->
       @div class: "dorota", =>
         @img
           class : 'bottom-image'
-          src   : '/dorota-cieslinska-square-transparent.png'
+          src   : '/dorota-cieslinska-circle-transparent.png'
           alt   : 'Dorota Cieslinska'
           text  : 'Dorota Cieslinska'
         @h3 'Dorota Cieslinska'
