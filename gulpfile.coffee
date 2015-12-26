@@ -16,12 +16,17 @@ source      = require 'vinyl-source-stream'
 exorcist    = require 'exorcist'
 _           = require 'lodash'
 
+# Use common tasks
+tasks         = require './gulpfile.d'
 
-gulp.task 'clean', (done) ->
-  del 'build/**/*', done
+tasks
+  clean   :
+    source      : 'build'
 
-# Use default options for teacup function
-gulp.task 'html', do require './gulpfile.d/teacup'
+  teacup  :
+    source      : 'html/**/*'
+    components  : 'components/*'
+    destination : 'build'
 
 # Fast browserify builds using watchify
 b = watchify browserify _.merge {}, watchify.args,
@@ -79,7 +84,7 @@ gulp.task 'build', gulp.series [
   'clean'
   gulp.parallel [
     'assets'
-    'html'
+    'teacup'
     'styl'
     'scripts'
   ]
@@ -107,6 +112,7 @@ gulp.task 'watch', (done) ->
     'assets/**/*'
     'scripts/**/*',
     'html/**/*'
+    'components/**/*'
     'styles/**/*'
     'package.json'
   ], gulp.series [
