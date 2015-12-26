@@ -1,13 +1,10 @@
 View     = require 'teacup-view'
-typeform = require './typeform'
 
 module.exports = new View ->
 
   @div class: 'freelance-container', =>
 
     @h1 "We are a team of two full stack team of web developers available to be hired for your project."
-
-    typeform()
 
     @tag 'main', class: 'about', =>
       @div class: "tadeusz", =>
@@ -63,8 +60,6 @@ module.exports = new View ->
 
     @p "We can work remotely or at your office in the Amsterdam area."
 
-
-
-
-
+    do @typeform
+    
     # TODO: @p "Copyright Tadeusz Lazurski & Dorota Cieslinska 2015"
