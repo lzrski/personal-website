@@ -3,11 +3,31 @@ typeform = require './typeform'
 
 module.exports = new View ->
 
-  @div class: 'bottom-container', =>
+  @div class: 'freelance-container', =>
 
-    @p "We are a team of two full stack web developers available to be hired for your project."
+    @h1 "We are a team of two full stack team of web developers available to be hired for your project."
 
-    @h3 "Area of expertise"
+    typeform()
+
+    @tag 'main', class: 'about', =>
+      @div class: "tadeusz", =>
+        @img
+          class : 'bottom-image'
+          src   : '/tadeusz-lazurski-circle-transparent.png'
+          alt   : 'Tadeusz Łazurski face - less than a half of it'
+          text  : 'Tadeusz Łazurski'
+        @h3 'Tadeusz Łazurski'
+        @p 'Full stack developer'
+      @div class: "dorota", =>
+        @img
+          class : 'bottom-image'
+          src   : '/dorota-cieslinska-circle-transparent.png'
+          alt   : 'Dorota Cieslinska'
+          text  : 'Dorota Cieslinska'
+        @h3 'Dorota Cieslinska'
+        @p 'Frontend developer'
+
+    @h2 "Area of expertise"
 
     @h4 "Product design"
     @p "We can help you choose right feature set and technology stack for your product."
@@ -37,31 +57,14 @@ module.exports = new View ->
         "SQL"
       ]
 
-    @h3 "How are we  working"
+    @h2 "How are we working"
 
     @p "You can outsource your entire project or it's part to us or hire us to strenghten your existing team."
 
     @p "We can work remotely or at your office in the Amsterdam area."
 
 
-    typeform()
 
-    @tag 'main', class: 'about', =>
-      @div class: "tadeusz", =>
-        @img
-          class : 'bottom-image'
-          src   : '/tadeusz-lazurski-circle-transparent.png'
-          alt   : 'Tadeusz Łazurski face - less than a half of it'
-          text  : 'Tadeusz Łazurski'
-        @h3 'Tadeusz Łazurski'
-        @p 'Full stack developer'
-      @div class: "dorota", =>
-        @img
-          class : 'bottom-image'
-          src   : '/dorota-cieslinska-circle-transparent.png'
-          alt   : 'Dorota Cieslinska'
-          text  : 'Dorota Cieslinska'
-        @h3 'Dorota Cieslinska'
-        @p 'Frontend developer'
+
 
     # TODO: @p "Copyright Tadeusz Lazurski & Dorota Cieslinska 2015"

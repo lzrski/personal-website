@@ -91,25 +91,22 @@ header, main, footer
   // padding         0 16rem
 
 
-.first-container, .bottom-container
-  min-height 100vh
-  width  100%
+.landing-container, .freelance-container
+  min-height      100vh
+  width           100%
 
 
-.first-container
+.landing-container
   // background-image  url('background.jpg')
-  background          hsla(0,0%,0%,90%)
+  background       hsla(0,0%,0%,90%)
 
   @import header
   @import main
   @import footer
 
-.bottom-container
+// freelance-container
+@import freelance-container
 
-  background white
-  color      black
 
-  @import bottom-header
-  @import about
 
 // TODO: issue for stylus - comments interfere with @import when @import is indented

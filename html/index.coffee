@@ -13,7 +13,7 @@ module.exports = new View ->
       @div id: 'container', =>
 
         # created new div for first page:
-        @div class: "first-container", =>
+        @div class: "landing-container", =>
           @header =>
             @h1 =>
               @raw "<strong>Hello</strong>, my name is Tadeusz."
