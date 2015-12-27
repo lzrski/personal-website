@@ -16,15 +16,9 @@ module.exports = new View (attributes) ->
 
     @tag 'main', =>
 
-      @p => @raw "I enjoy solving problems using <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong> at <a href='http://beestar.eu/'><strong>Beestar</strong></a> - an IoT company based in wonderful Amsterdam."
-
-      @p =>
-        @text "Together with my partner, a frontend developer, we are also available for "
-        @a href: '/', 'freelance contracts'
-        @text '.'
-      # icon for scrolling
-      # TODO: scroll: on click move to the next page
-
+      @markdown """
+        Together with my partner (a frontend developer) we enjoy solving problems using **Node.js**, **React.js** and **CoffeeScript** in the wonderful Amsterdam. You can **[hire us for your project](#freelance)**.
+      """
 
     @footer =>
       @ul id: 'menu', =>

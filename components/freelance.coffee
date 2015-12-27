@@ -3,7 +3,9 @@ View     = require 'teacup-view'
 module.exports = new View (attributes) ->
   @section attributes, => @div class: "container", =>
 
-    @h1 "We are a full stack team of two web developers available to be hired for your project."
+    @markdown """
+      # We are a **full stack** team of **two web programmers** available to be hired for your project.
+    """
 
     @div class: 'team', =>
       @a
@@ -96,8 +98,3 @@ module.exports = new View (attributes) ->
       """
 
     do @typeform
-
-    @footer => @markdown """
-      Copyright Tadeusz Lazurski & Dorota Cieslinska 2015
-      This website is open-source. You can [fork it on GitHub](https://github.com/lzrski/personal-website).
-    """
