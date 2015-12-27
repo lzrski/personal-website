@@ -40,36 +40,50 @@ module.exports = new View (attributes) ->
       @h3 "Frontend technologies"
 
       @grid items: [
+        src:   "/logos/logo-js.svg"
         title: "JavaScript"
       ,
+        src:   "/logos/logo-html5.svg"
         title: "HTML"
       ,
+        src:   "/logos/logo-css3.svg"
         title: "CSS"
       ,
+        src:   "/logos/logo-reactjs.svg"
         title: "React.js"
       ,
+        src:   "/logos/logo-coffee.svg"
         title: "CoffeeScript"
       ,
+        src:   "/logos/logo-backbone.svg"
         title: "Backbone.js"
       ,
+        src:   "/logos/logo-jquery.svg"
         title: "jQuery"
       ]
 
       @h4 "Backend technologies"
 
       @grid items: [
+        src:   "/logos/logo-node.svg"
         title: "Node.js"
       ,
+        src:   "/logos/logo-rethinkdb.svg"
         title: "RethinkDB"
       ,
+        src:   "/logos/logo-elasticsearch.svg"
         title: "ElasticSearch"
       ,
-        title: "SocketIO"
+        src:   "/logos/logo-socketio.svg"
+        title: "Socket.IO"
       ,
+        src:   "/logos/logo-docker.svg"
         title: "Docker"
       ,
+        src:   "/logos/logo-mongodb.svg"
         title: "MongoDB"
       ,
+        src:   "/logos/logo-mysql.svg"
         title: "SQL"
       ]
 

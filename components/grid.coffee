@@ -1,8 +1,8 @@
 View        = require 'teacup-view'
 
-grid_item = View ({title}) ->
+grid_item = View ({ src, title }) ->
   @li class: "grid-item", =>
-    @img src: 'https://www.fillmurray.com/200/200'
+    @img { src }
     @p title
 
 module.exports = View ({ items }) ->
