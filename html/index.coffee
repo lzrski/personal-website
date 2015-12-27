@@ -13,5 +13,6 @@ module.exports = new View ->
         do @landing
         do @freelance
 
-      @script src: '/bundle.js'
-      @script src: '/google-analytics.js'
+      @script async: yes, src: '/bundle.js'
+      @script async: yes, src: '/google-analytics.js'
+      @script async: yes, src: "/typeform.js"
