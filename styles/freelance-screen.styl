@@ -1,27 +1,28 @@
-.freelance-container
+#freelance
+
   display             flex
   justify-content     center
   align-items         center
   flex-direction      column
-  text-align          center
+  border-top          solid 2rem black
 
-  width               100%
+  color               gray
 
-  background          white
-  color               hsl(0, 52%, 52%)
+  .team
+    display           flex
+    flex-flow         row wrap
+    justify-content   space-around
+    margin            12rem 0
+    text-align        center
 
-  padding-top         10rem
-  @media tablet
-    padding-top       16rem
+    img
+      height          40rem
 
-  h1
-    margin              0 20rem
+      @media tablet
+        height        50rem
 
-    font-weight         regular
-    font-size           12.5rem
-
-  h3
-    margin              10rem 20rem
+  h1, h2
+    text-align        center
 
   .typeform-share
     font-size         10rem
@@ -36,9 +37,3 @@
 
     &:hover
       font-weight bolder
-
-  p
-    color: black
-
-
-  @import about

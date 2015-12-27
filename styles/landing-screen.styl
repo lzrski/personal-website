@@ -1,0 +1,71 @@
+#landing
+  display: flex
+  background          black
+  background-image    url('background.jpg')
+  background-position top center
+  color               white
+
+  .container
+    display           flex
+    flex-flow         column nowrap
+    justify-content   space-between
+
+    @media tablet
+      text-align      initial
+
+    header
+      display         flex
+      flex-flow       column nowrap
+      justify-content flex-end
+      align-items     center
+
+      h1
+        text-align        center
+
+      @media tablet
+        flex-flow     row-reverse nowrap
+        padding-top   16rem
+
+        h1
+          text-align    inherit
+          padding-left  10rem
+
+      .main-image
+        margin          4rem
+
+        height          50rem
+        flex            0 0 auto
+
+    main
+      display               block
+
+      @media tablet
+        padding-left        68rem
+
+    footer
+      padding-top           6rem
+      padding-bottom        12rem
+      margin                0 20rem
+      @media tablet
+        padding-bottom      16rem
+
+      text-align            center
+
+
+      @import get-in-touch-menu
+
+      .source
+        text-decoration     none
+        color               white
+
+        &:before
+          content           '</>'
+          display           block
+          font-weight       bold
+          padding           3rem
+
+        @media tablet
+          font-size         6rem
+
+        @media desktop
+          font-size         4.5rem

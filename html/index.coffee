@@ -3,7 +3,7 @@ View      = require 'teacup-view'
 module.exports = new View ->
   @doctype 5
 
-  @html =>
+  @html lang: 'en', =>
     @head =>
       @link rel: 'stylesheet', href: '/index.css'
       @meta name: "viewport", content: "width=device-width, initial-scale=1.0"
@@ -11,6 +11,11 @@ module.exports = new View ->
     @body =>
       @landing    id: 'landing'
       @freelance  id: 'freelance'
+      @footer => @markdown """
+        Copyright Tadeusz Lazurski & Dorota Cieslinska 2015
+
+        This website is open-source. You can [fork it on GitHub](https://github.com/lzrski/personal-website).
+      """
 
       @script async: yes, src: '/bundle.js'
       @script async: yes, src: '/google-analytics.js'
