@@ -2,7 +2,7 @@ View     = require 'teacup-view'
 typeform = require './typeform'
 
 module.exports = new View (attributes) ->
-  @section attributes, =>
+  @section attributes, => @div class: "container", =>
     @header =>
       @h1 =>
         @raw "<strong>Hello</strong>, my name is Tadeusz."

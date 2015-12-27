@@ -1,7 +1,7 @@
 View     = require 'teacup-view'
 
 module.exports = new View (attributes) ->
-  @section attributes, =>
+  @section attributes, => @div class: "container", =>
 
     @h1 "We are a full stack team of two web developers available to be hired for your project."
 
