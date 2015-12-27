@@ -74,10 +74,12 @@ gulp.task 'assets', ->
 gulp.task 'styl', ->
   gulp
     .src './styles/index.styl'
+    .pipe sourcemaps.init loadMaps: no
     .pipe stylus()
   	.pipe autoprefixer
     	browsers : [ '> 5%', 'last 5 versions' ]
     	cascade  : false
+    .pipe sourcemaps.write '.'
     .pipe gulp.dest './build'
 
 gulp.task 'build', gulp.series [
