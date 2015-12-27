@@ -27,15 +27,17 @@ module.exports = new View (attributes) ->
           @p 'Frontend developer'
 
     @article =>
-      @h2 "Area of expertise"
+      @markdown """
+        ## Area of expertise
 
-      @h4 "Product design"
+        ### Product design
 
-      @p "We can help you choose right feature set and technology stack for your product."
+        We can help you choose **right feature set** and **technology stack** for your product.
 
-      @p "We have experience in project management and product development in various types of organisations."
+        We have experience in **project management** and **product development** in various types of organisations.
+      """
 
-      @h4 "Frontend technologies"
+      @h3 "Frontend technologies"
 
       @grid items: [
         title: "JavaScript"
@@ -71,14 +73,17 @@ module.exports = new View (attributes) ->
         title: "SQL"
       ]
 
-      @h2 "How are we working"
+      @markdown """
+        ## How are we working
 
-      @p "You can outsource your entire project or it's part to us or hire us to strenghten your existing team."
+        You can outsource your entire project or it's part to us or hire us to strenghten your existing team.
 
-      @p "We can work remotely or at your office in the Amsterdam area."
+        We can work remotely or at your office in the Amsterdam area.
+      """
 
     do @typeform
 
-    @footer =>
-      @p "Copyright Tadeusz Lazurski & Dorota Cieslinska 2015"
-      @p "This website is open-source. You can fork it on GitHub."
+    @footer => @markdown """
+      Copyright Tadeusz Lazurski & Dorota Cieslinska 2015
+      This website is open-source. You can [fork it on GitHub](https://github.com/lzrski/personal-website).
+    """
