@@ -5,6 +5,7 @@ module.exports = new View (attributes) ->
 
     @markdown """
       # We are a **full stack** team of **two web programmers** available to be hired for your project.
+
     """
 
     @div class: 'team', =>
@@ -32,11 +33,8 @@ module.exports = new View (attributes) ->
       @markdown """
         ## Area of expertise
 
-        ### Product design
-
         We can help you choose **right feature set** and **technology stack** for your product. We have experience in **project management** and **product development** in various types of organisations.
 
-        ### Technologies we are comfortable with
       """
 
       @grid items: [
@@ -86,7 +84,7 @@ module.exports = new View (attributes) ->
       @markdown """
         ## How are we working
 
-        You can outsource your entire project or it's part to us or hire us to strenghten your existing team.
+        You can **outsource your entire project** or it's part to us or hire us **to strenghten your existing team**.
 
         We can work remotely or at your office in the Amsterdam area.
       """
