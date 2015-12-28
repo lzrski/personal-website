@@ -1,45 +1,22 @@
-View = require 'teacup-view'
+View      = require 'teacup-view'
 
 module.exports = new View ->
   @doctype 5
 
-  @html =>
+  @html lang: 'en', =>
     @head =>
       @link rel: 'stylesheet', href: '/index.css'
       @meta name: "viewport", content: "width=device-width, initial-scale=1.0"
 
     @body =>
-      @div id: 'container', =>
-        @header =>
-          @h1 =>
-            @raw "<strong>Hello</strong>, my name is Tadeusz."
-            do @br
-            @raw "I'm a <strong>full stack web developer</strong>."
+      @landing    id: 'landing'
+      @freelance  id: 'freelance'
+      @footer => @markdown """
+        Copyright Tadeusz Lazurski & Dorota Cieslinska 2015
 
-          @img
-            class : 'main-image'
-            src   : '/tadeusz-lazurski-circle-transparent.png'
-            alt   : 'Tadeusz Łazurski face - less than a half of it'
+        This website is open-source. You can [fork it on GitHub](https://github.com/lzrski/personal-website).
+      """
 
-        @tag 'main', =>
-
-          @p => @raw "I enjoy solving problems using <strong>Node.js</strong>, <strong>React.js</strong> and <strong>CoffeeScript</strong> at <a href='http://beestar.eu/'><strong>Beestar</strong></a> - an IoT company based in wonderful Amsterdam."
-
-        @footer =>
-          @ul id: 'menu', =>
-            @li class: 'caption', => @span "Get in touch via"
-            (@li => @a { href },  => @span label) for label, href of {
-              'GitHub'        : 'https://github.com/lzrski'
-              'StackOverflow' : 'https://careers.stackoverflow.com/lazurski'
-              'Twitter'       : 'https://twitter.com/lazurski'
-              'LinkedIn'      : 'https://pl.linkedin.com/in/lazurski'
-            }
-
-          # @a
-          #   class : 'source'
-          #   href  : 'https://github.com/lzrski/personal-website'
-          #   'Fork this website at GitHub'
-
-
-      @script src: '/bundle.js'
-      @script src: '/google-analytics.js'
+      @script async: yes, src: '/bundle.js'
+      @script async: yes, src: '/google-analytics.js'
+      @script async: yes, src: "/typeform.js"

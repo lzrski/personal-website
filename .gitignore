@@ -5,3 +5,4 @@ build/
 npm-debug.log
 wiki/
 ./config.cson
+.DS_Store
