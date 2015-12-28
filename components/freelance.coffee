@@ -16,7 +16,7 @@ module.exports = new View (attributes) ->
           @img
             src   : '/tadeusz-lazurski-circle-transparent.png'
             alt   : 'Tadeusz Łazurski face - less than a half of it'
-          @h3 'Tadeusz Łazurski'
+          @h3 'Tadeusz Lazurski'
           @p 'Full stack developer'
 
       @a
