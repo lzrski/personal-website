@@ -33,7 +33,11 @@ module.exports = new View (attributes) ->
       @markdown """
         ## Area of expertise
 
-        We can help you choose **right feature set** and **technology stack** for your product. We have experience in **project management** and **product development** in various types of organisations.
+        We can help you choose **right feature set** and **technology stack** for your product. We have experience in **project management** and **product development** in various types of organisations. You can **outsource your entire project** or it's part to us or hire us **to strenghten your existing team**. We can work remotely or at your office in the Amsterdam area.
+
+        ## Some of the technologies we use
+
+
 
       """
 
@@ -80,13 +84,5 @@ module.exports = new View (attributes) ->
         src:   "/logos/logo-mysql.svg"
         title: "SQL"
       ]
-
-      @markdown """
-        ## How are we working
-
-        You can **outsource your entire project** or it's part to us or hire us **to strenghten your existing team**.
-
-        We can work remotely or at your office in the Amsterdam area.
-      """
 
     do @typeform
