@@ -1,24 +1,23 @@
-gulp        = require 'gulp'
-coffee      = require 'gulp-coffee'
-mocha       = require 'gulp-mocha'
-sourcemaps  = require 'gulp-sourcemaps'
-del         = require 'del'
-webserver   = require 'gulp-webserver'
-stylus      = require 'gulp-stylus'
-autoprefixer= require 'gulp-autoprefixer'
-through     = require 'through2'
-browserify  = require 'browserify'
-watchify    = require 'watchify'
-coffeeify   = require 'coffeeify'
-uglify      = require 'gulp-uglify'
-buffer      = require 'vinyl-buffer'
-source      = require 'vinyl-source-stream'
-exorcist    = require 'exorcist'
-_           = require 'lodash'
+gulp          = require 'gulp'
+coffee        = require 'gulp-coffee'
+mocha         = require 'gulp-mocha'
+sourcemaps    = require 'gulp-sourcemaps'
+del           = require 'del'
+webserver     = require 'gulp-webserver'
+stylus        = require 'gulp-stylus'
+autoprefixer  = require 'gulp-autoprefixer'
+through       = require 'through2'
+browserify    = require 'browserify'
+watchify      = require 'watchify'
+coffeeify     = require 'coffeeify'
+uglify        = require 'gulp-uglify'
+buffer        = require 'vinyl-buffer'
+source        = require 'vinyl-source-stream'
+exorcist      = require 'exorcist'
+_             = require 'lodash'
 
 # Use common tasks
 tasks         = require './gulpfile.d'
-
 tasks
   clean   :
     source      : 'build'
@@ -80,6 +79,10 @@ gulp.task 'styl', ->
     	browsers : [ '> 5%', 'last 5 versions' ]
     	cascade  : false
     .pipe sourcemaps.write '.'
+
+    # FIXME: Temporary fix for gulpjs/gulp#1461 until gulpjs/vinyl-fs#128 is ready
+    .pipe do require './gulpfile.d/helpers/touch'
+
     .pipe gulp.dest './build'
 
 gulp.task 'build', gulp.series [

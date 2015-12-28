@@ -68,6 +68,10 @@ module.exports = (options = {}) ->
 
       .pipe rename extname: '.html'
       .pipe if NODE_ENV is 'development' then prettify indent_size: 2 else through.obj()
+
+      # FIXME: Temporary fix for gulpjs/gulp#1461 until gulpjs/vinyl-fs#128 is ready
+      .pipe do require './helpers/touch'
+
       .pipe dest options.destination
 
   task 'teacup', series [
