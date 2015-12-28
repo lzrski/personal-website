@@ -9,9 +9,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg28063"
-   viewBox="0 0 600 600"
-   height="600"
-   width="600"
+   viewBox="0 0 200 200"
+   height="200"
+   width="200"
    inkscape:version="0.91 r13725"
    sodipodi:docname="logo-reactjs.svg">
   <sodipodi:namedview
@@ -23,17 +23,21 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1391"
-     inkscape:window-height="855"
+     inkscape:window-width="1280"
+     inkscape:window-height="744"
      id="namedview46"
      showgrid="false"
-     inkscape:zoom="1.18"
-     inkscape:cx="-111.86441"
-     inkscape:cy="100"
-     inkscape:window-x="49"
-     inkscape:window-y="0"
+     inkscape:zoom="0.59"
+     inkscape:cx="1.4938648"
+     inkscape:cy="263.31872"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg28063" />
+     inkscape:current-layer="svg28063"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs28065">
     <clipPath
@@ -217,12 +221,12 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(200,-652.36216)"
+     transform="matrix(0.33333333,0,0,0.33333333,66.666666,-217.45405)"
      id="layer1">
     <g
        transform="translate(-200,652.36216)"

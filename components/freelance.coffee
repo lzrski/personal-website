@@ -34,12 +34,10 @@ module.exports = new View (attributes) ->
 
         ### Product design
 
-        We can help you choose **right feature set** and **technology stack** for your product.
+        We can help you choose **right feature set** and **technology stack** for your product. We have experience in **project management** and **product development** in various types of organisations.
 
-        We have experience in **project management** and **product development** in various types of organisations.
+        ### Technologies we are comfortable with
       """
-
-      @h3 "Frontend technologies"
 
       @grid items: [
         src:   "/logos/logo-js.svg"
@@ -62,11 +60,7 @@ module.exports = new View (attributes) ->
       ,
         src:   "/logos/logo-jquery.svg"
         title: "jQuery"
-      ]
-
-      @h4 "Backend technologies"
-
-      @grid items: [
+      ,
         src:   "/logos/logo-node.svg"
         title: "Node.js"
       ,
