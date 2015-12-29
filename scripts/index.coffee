@@ -1,5 +1,9 @@
 jQuery      = require 'jquery'
 {debounce}  = require 'lodash'
+bootstrap   = require 'bootstrap'
+
+
+$.material.init()
 
 jQuery ($) =>
   # Magic line
