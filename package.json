@@ -36,6 +36,8 @@
     "watchify": "^3.3.1"
   },
   "dependencies": {
+    "config-object": "^0.3.1",
+    "firebase": "^2.3.2",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
     "underscore.string": "^2.3.3"
