@@ -1,9 +1,6 @@
 jQuery      = require 'jquery'
 {debounce}  = require 'lodash'
-bootstrap   = require 'bootstrap'
 
-
-$.material.init()
 
 jQuery ($) =>
   # Magic line
@@ -38,3 +35,31 @@ jQuery ($) =>
   $(window)
     .on 'load'  , reset
     .on 'resize', reset
+
+# Database
+Firebase   = require 'firebase'
+# TODO: Read URL from configuration
+database   = new Firebase 'https://lazurski-pl-form.firebaseio.com/'
+
+jQuery ($) =>
+  # On submit send form data to Firebase
+  form = $ '#contact'
+  thnx = $ '#thank-you'
+
+  form.on 'submit', (event) =>
+    do event.preventDefault
+    form
+      .find 'button'
+      .prop 'disabled', yes
+
+    inquiry = {}
+
+    form
+      .find 'input, textarea'
+      .each (i, element) =>
+        inquiry[element.name] = element.value
+
+    database.push inquiry, (error) =>
+      if error then return alert error
+      form.addClass 'sent'
+      thnx.addClass 'visible'

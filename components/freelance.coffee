@@ -82,21 +82,4 @@ module.exports = new View (attributes) ->
         title: "SQL"
       ]
 
-    # do @typeform
-
-    #form
-
-    @div =>
-
-
-      @tag "form", class: "horizontal", =>
-        @tag "fieldset", =>
-
-
-          @h2 """Let's get in touch"""
-          @input type:"text", class:"form-control", placeholder:"Username"
-
-          @input type: "email", name: "email", hint: "email"
-          @input type: "text", name: "company"
-          @input type: "text", name: "description"
-          @input type: "submit", value: "Submit"
+    @contact    id: 'contact'
