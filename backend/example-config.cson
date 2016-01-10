@@ -9,6 +9,22 @@ nodemailer:
 
 firebase  :
   url       : 'https://example.firebaseio.com/'
+  secret    : 'copy&paste App secret from Firebase dashboard'
 
-recipients:
-  ['user@example.com', 'anotheruser@example.com']
+recipients: [
+  'user@example.com'
+  'anotheruser@example.com'
+]
+
+###
+Firebase security rules
+
+{
+    "rules": {
+        ".read": false,
+        "$message": {
+            ".write": "!data.exists()"
+        }
+    }
+}
+###
