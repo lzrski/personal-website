@@ -82,4 +82,4 @@ module.exports = new View (attributes) ->
         title: "SQL"
       ]
 
-    do @typeform
+    @contact    id: 'contact'

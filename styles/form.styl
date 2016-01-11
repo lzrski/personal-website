@@ -1,0 +1,72 @@
+form-height = 100vh
+
+form
+
+  display             flex
+  justify-content     center
+  align-items         center
+  flex-direction      column
+
+  color               gray
+
+  opacity             1
+  height              form-height
+  transition          opacity 1s, height 1s 1s
+
+
+  &.sent
+    opacity           0
+    height            0
+    pointer-events    none
+
+  h1, h2
+    margin-bottom     10rem
+    color             red
+    font-weight       regular
+
+
+  input, textarea, button
+    min-width         100%
+    margin-bottom     5rem
+    margin-top        5rem
+    padding           3rem
+    border            solid 1px gray-light
+    transition        box-shadow 0.3s, border 0.3s
+
+    font-weight       light
+    font-size         5rem
+
+    &:focus
+      border          solid 1px red
+      outline         none
+      box-shadow      0 0 5px 1px red-light
+
+  textarea
+    resize            none
+
+  button
+    font-size         10rem
+    color             white
+    background        red
+    border-radius     3px
+    border            none
+
+#thank-you
+  display             flex
+  justify-content     center
+  align-items         center
+  flex-direction      column
+
+  opacity             0
+  height              0
+  transition          opacity 1s 1s, height 1s 1s
+
+  pointer-events      none
+
+  &.visible
+    opacity           1
+    height            form-height
+
+  h1
+    color             red
+    font-weight       regular

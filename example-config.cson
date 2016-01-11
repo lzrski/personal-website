@@ -1,0 +1,30 @@
+# Fill information and copy this to config.cson
+# config.cson is added to .gitignore and stored locally only, don't share it
+
+nodemailer:
+  service   : 'gmail',
+  auth      :
+    user      : 'user@example.com',
+    pass      : '***********'
+
+firebase  :
+  url       : 'https://example.firebaseio.com/'
+  secret    : 'copy&paste App secret from Firebase dashboard'
+
+recipients: [
+  'user@example.com'
+  'anotheruser@example.com'
+]
+
+###
+Firebase security rules
+
+{
+    "rules": {
+        ".read": false,
+        "$message": {
+            ".write": "!data.exists()"
+        }
+    }
+}
+###
