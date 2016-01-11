@@ -85,6 +85,12 @@ gulp.task 'styl', ->
 
     .pipe gulp.dest './build'
 
+gulp.task 'backend', () =>
+  gulp
+    .src './backend/**/*.coffee'
+    .pipe coffee()
+    .pipe gulp.dest 'build'
+
 gulp.task 'build', gulp.series [
   'clean'
   gulp.parallel [
@@ -92,6 +98,7 @@ gulp.task 'build', gulp.series [
     'teacup'
     'styl'
     'scripts'
+    'backend'
   ]
   'test'
 ]
@@ -115,7 +122,8 @@ gulp.task 'watch', (done) ->
   # TODO: More granular watch
   gulp.watch [
     'assets/**/*'
-    'scripts/**/*',
+    'scripts/**/*'
+    'backend/**/*'
     'html/**/*'
     'components/**/*'
     'styles/**/*'

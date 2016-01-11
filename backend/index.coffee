@@ -2,7 +2,7 @@ nodemailer = require 'nodemailer'
 Firebase   = require 'firebase'
 config     = require 'config-object'
 
-config.load 'config.cson', required: yes
+config.load '../config.cson', required: yes
 database   = new Firebase config.firebase.url
 
 database.authWithCustomToken config.firebase.secret, (error) ->
