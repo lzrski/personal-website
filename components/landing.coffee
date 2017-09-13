@@ -1,36 +1,27 @@
 View     = require 'teacup-view'
-typeform = require './typeform'
 
 module.exports = new View (attributes) ->
   @section attributes, => @div class: "container", =>
     @header =>
       @h1 =>
-        @raw "<strong>Hello</strong>, my name is Tadeusz."
-        do @br
-        @raw "I'm a <strong>full stack web developer</strong>."
+        @raw "<strong>Zawadzka, Agnieszka</strong>: psycholog, trener, coach, dydaktyk, pozytywna osoba."
 
       @img
         class : 'main-image'
-        src   : '/tadeusz-lazurski-circle-transparent.png'
-        alt   : 'Tadeusz Łazurski face - less than a half of it'
+        src   : '/agnieszka-zawadzka-circle-transparent.png'
+        alt   : 'Agnieszka Zawadzka'
 
     @tag 'main', =>
 
       @markdown """
-        Together with my partner (a frontend developer) we enjoy solving problems using **Node.js**, **React.js** and **CoffeeScript** in the wonderful Amsterdam. You can **[hire us for your project](#freelance)**.
+        Za niewielką opłatą może wprowadzić **wartościową zmianę** w towim życiu - nie tylko zawodowym.
       """
 
     @footer =>
       @ul id: 'menu', =>
-        @li class: 'caption', => @span "Get in touch via"
+        @li class: 'caption', => @span "Poznajmy się"
         (@li => @a { href },  => @span label) for label, href of {
-          'GitHub'        : 'https://github.com/lzrski'
-          'StackOverflow' : 'https://careers.stackoverflow.com/lazurski'
-          'Twitter'       : 'https://twitter.com/lazurski'
-          'LinkedIn'      : 'https://linkedin.com/in/lazurski'
+          'ICF'           : 'https://icf.org.pl/project-details/agnieszka-zawadzka/'
+          'LinkedIn'      : 'https://www.linkedin.com/in/agnieszka-zawadzka-255a9ab8/'
+          'E-Mail'        : 'mailto:azawadzka.pl@gmail.com'
         }
-
-      # @a
-      #   class : 'source'
-      #   href  : 'https://github.com/lzrski/personal-website'
-      #   'Fork this website at GitHub'

@@ -14,11 +14,9 @@ module.exports = new View ->
       @landing    id: 'landing'
       @freelance  id: 'freelance'
       @footer => @markdown """
-        Copyright Tadeusz Lazurski & Dorota Cieslinska 2015
+        Made by [Tadeusz Lazurski](https://www.lazurski.pl/) 2017. Awesome background photo by [Erika Barker](https://ebstock.deviantart.com/).
 
         This website is open-source. You can [fork it on GitHub](https://github.com/lzrski/personal-website).
       """
 
       @script async: yes, src: '/bundle.js'
-      @script async: yes, src: '/google-analytics.js'
-      @script async: yes, src: "/typeform.js"

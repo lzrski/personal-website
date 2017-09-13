@@ -3,6 +3,7 @@ with import <nixpkgs> {}; stdenv.mkDerivation {
   buildInputs = [
     caddy
     nodejs
+    gimp
   ];
   shellHook = ''
     # Start user's preffered shell
