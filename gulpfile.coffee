@@ -98,9 +98,9 @@ gulp.task 'build', gulp.series [
     'teacup'
     'styl'
     'scripts'
-    'backend'
+    # 'backend'
   ]
-  'test'
+  # 'test'
 ]
 
 gulp.task 'serve', ->
@@ -116,7 +116,8 @@ gulp.task 'watch', (done) ->
     'test/**/*'
     'package.json'
   ], gulp.series [
-    'test'
+    (done) => done null
+    # 'test'
   ]
 
   # TODO: More granular watch
@@ -140,4 +141,13 @@ gulp.task 'develop', gulp.series [
   'build'
   'serve'
   'watch'
+]
+
+# Hack to make sure process finishes even if some descriptors or events
+# listeners are not cleaned up
+gulp.task 'prepublish', gulp.series [
+  'build'
+  (done) =>
+    setTimeout process.exit, 100, 0
+    done null
 ]

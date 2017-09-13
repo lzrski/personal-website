@@ -6,7 +6,7 @@
   "scripts": {
     "test": "gulp test",
     "develop": "gulp develop",
-    "prepublish": "gulp build"
+    "prepublish": "gulp prepublish"
   },
   "author": "Tadeusz Łazurski",
   "license": "GPL3",
