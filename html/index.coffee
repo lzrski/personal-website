@@ -14,11 +14,11 @@ module.exports = new View ->
       @landing    id: 'landing'
       @freelance  id: 'freelance'
       @footer => @markdown """
-        Copyright Tadeusz Lazurski & Dorota Cieslinska 2015
+        Copyright Tadeusz Lazurski & Marcel van Pinxteren 2017
 
         This website is open-source. You can [fork it on GitHub](https://github.com/lzrski/personal-website).
       """
 
       @script async: yes, src: '/bundle.js'
-      @script async: yes, src: '/google-analytics.js'
-      @script async: yes, src: "/typeform.js"
+      # @script async: yes, src: '/google-analytics.js'
+      # @script async: yes, src: "/typeform.js"
