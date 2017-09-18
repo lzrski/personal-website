@@ -50,20 +50,20 @@ gulp.task 'scripts', ->
     .pipe gulp.dest './build/'
 
 
-gulp.task 'test', ->
-  development = process.env.NODE_ENV is 'development'
-
-  gulp
-    .src 'test/*.coffee', read: no
-    .pipe mocha
-      reporter  : 'spec'
-      compilers : 'coffee:coffee-script'
-    .once 'error', (error) ->
-      console.error 'Tests failed', error
-      if development
-        return @emit 'end'
-      else
-        process.exit 1
+# gulp.task 'test', ->
+#   development = process.env.NODE_ENV is 'development'
+#
+#   gulp
+#     .src 'test/*.coffee', read: no
+#     .pipe mocha
+#       reporter  : 'spec'
+#       compilers : 'coffee:coffee-script'
+#     .once 'error', (error) ->
+#       console.error 'Tests failed', error
+#       if development
+#         return @emit 'end'
+#       else
+#         process.exit 1
 
 gulp.task 'assets', ->
   gulp
@@ -85,11 +85,11 @@ gulp.task 'styl', ->
 
     .pipe gulp.dest './build'
 
-gulp.task 'backend', () =>
-  gulp
-    .src './backend/**/*.coffee'
-    .pipe coffee()
-    .pipe gulp.dest 'build'
+# gulp.task 'backend', () =>
+#   gulp
+#     .src './backend/**/*.coffee'
+#     .pipe coffee()
+#     .pipe gulp.dest 'build'
 
 gulp.task 'build', gulp.series [
   'clean'
@@ -98,9 +98,9 @@ gulp.task 'build', gulp.series [
     'teacup'
     'styl'
     'scripts'
-    'backend'
+    # 'backend'
   ]
-  'test'
+  # 'test'
 ]
 
 gulp.task 'serve', ->
@@ -112,12 +112,12 @@ gulp.task 'serve', ->
       livereload: yes
 
 gulp.task 'watch', (done) ->
-  gulp.watch [
-    'test/**/*'
-    'package.json'
-  ], gulp.series [
-    'test'
-  ]
+  # gulp.watch [
+  #   'test/**/*'
+  #   'package.json'
+  # ], gulp.series [
+  #   'test'
+  # ]
 
   # TODO: More granular watch
   gulp.watch [
