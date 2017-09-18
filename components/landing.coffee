@@ -20,20 +20,6 @@ module.exports = new View (attributes) ->
       @markdown """
         Talk with us about your idea.
 
-        First design session is free and with no obligations.
+        First design session is free and with no further obligations. [Learn more](#freelance).
       """
-
-    # @footer =>
-    #   @ul id: 'menu', =>
-    #     @li class: 'caption', => @span "Get in touch via"
-    #     (@li => @a { href },  => @span label) for label, href of {
-    #       'GitHub'        : 'https://github.com/lzrski'
-    #       'StackOverflow' : 'https://careers.stackoverflow.com/lazurski'
-    #       'Twitter'       : 'https://twitter.com/lazurski'
-    #       'LinkedIn'      : 'https://linkedin.com/in/lazurski'
-    #     }
-
-      # @a
-      #   class : 'source'
-      #   href  : 'https://github.com/lzrski/personal-website'
-      #   'Fork this website at GitHub'
+      
