@@ -10,76 +10,30 @@ module.exports = new View (attributes) ->
 
     @div class: 'team', =>
       @a
-        href  : "#landing"
+        href  : "https://linkedin.com/in/lazurski"
+        target: "_blank"
         class : "teammate tadeusz"
         =>
           @img
             src   : '/tadeusz-lazurski-circle-transparent.png'
             alt   : 'Tadeusz Łazurski face - less than a half of it'
           @h3 'Tadeusz Lazurski'
-          @p 'Full stack developer'
+          @p '+31 626 259 386'
 
       @a
-        href  : "http://lori2lori.rocks"
-        class : "teammate dorota"
+        href  : "https://linkedin.com/in/pinxt"
+        target: "_blank"
+        class : "teammate marcel"
         =>
           @img
-            src   : '/dorota-cieslinska-circle-transparent.png'
-            alt   : 'Dorota Cieslinska'
-          @h3 'Dorota Cieslinska'
-          @p 'Frontend developer'
+            src   : '/marcel-van-pinxteren-circle-transparent.png'
+            alt   : 'Marcel van Pinxteren'
+          @h3 'Marcel van Pinxteren'
+          @p '+31 657 33 45 86'
 
     @article =>
       @markdown """
         ## Area of expertise
 
-        We can help you choose **right feature set** and **technology stack** for your product. We have experience in **project management** and **product development** in various types of organisations. You can **outsource your entire project** or it's part to us or hire us to **strenghten your existing team**. We can work remotely or at your office in the Amsterdam area.
-
-        ## Some of the technologies we use
+        We can help you choose **right feature set** and **technology stack** for your product. We have experience in **project management** and **product development** in various types of organisations. We can work remotely or at your office in the Netherlands.
       """
-
-      @grid items: [
-        src:   "/logos/logo-js.svg"
-        title: "JavaScript"
-      ,
-        src:   "/logos/logo-html5.svg"
-        title: "HTML"
-      ,
-        src:   "/logos/logo-css3.svg"
-        title: "CSS"
-      ,
-        src:   "/logos/logo-reactjs.svg"
-        title: "React.js"
-      ,
-        src:   "/logos/logo-coffee.svg"
-        title: "CoffeeScript"
-      ,
-        src:   "/logos/logo-backbone.svg"
-        title: "Backbone.js"
-      ,
-        src:   "/logos/logo-jquery.svg"
-        title: "jQuery"
-      ,
-        src:   "/logos/logo-node.svg"
-        title: "Node.js"
-      ,
-        src:   "/logos/logo-rethinkdb.svg"
-        title: "RethinkDB"
-      ,
-        src:   "/logos/logo-elasticsearch.svg"
-        title: "ElasticSearch"
-      ,
-        src:   "/logos/logo-socketio.svg"
-        title: "Socket.IO"
-      ,
-        src:   "/logos/logo-docker.svg"
-        title: "Docker"
-      ,
-        src:   "/logos/logo-mongodb.svg"
-        title: "MongoDB"
-      ,
-        src:   "/logos/logo-mysql.svg"
-        title: "SQL"
-      ]
-
-    @contact    id: 'contact'
