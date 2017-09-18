@@ -18,8 +18,5 @@ module.exports = new View (attributes) ->
     @tag 'main', =>
 
       @markdown """
-        Talk with us about your idea.
-
-        First design session is free and with no further obligations. [Learn more](#freelance).
+        **Talk** with us about your idea. First design session is **free and with no further obligations**. [Learn more](#freelance).
       """
-      
